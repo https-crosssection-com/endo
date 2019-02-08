@@ -24,6 +24,7 @@
 	opacity:0.6;
 	display:inline-block;
 	float:right;
+	display: none;
 }
 .right_bar_contents{
 	width:80px;
