@@ -1,0 +1,51 @@
+.side_bar{
+    width:120px;
+    z-index:999;
+    opacity:0.6;
+    display:inline-block;
+    float:left;
+}
+.side_bar_contents{
+	width:80px;
+	margin:auto;
+}
+
+.side_bar_contents_icon{
+	width:80px;
+	height:80px;
+}
+.side_bar_contents_text{
+	color:gray;
+	text-align:center;
+}
+.right_bar{
+	width:100px;
+	z-index:999;
+	opacity:0.6;
+	display:inline-block;
+	float:right;
+}
+.right_bar_contents{
+	width:80px;
+	margin:auto;
+}
+
+.right_bar_contents_icon{
+	width:80px;
+	height:80px;
+}
+.right_bar_contents_text{
+	color:gray;
+	text-align:center;
+}
+
+.main-display{
+	background-color:green;
+	width:100vw;
+	height:100vh;
+	z-index:0;
+	position:fixed;
+	top:0;
+	left:0;
+	opacity:0.1;
+}
