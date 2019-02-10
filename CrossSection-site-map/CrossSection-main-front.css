@@ -1,0 +1,141 @@
+.side_bar{
+    width:120px;
+    height:100vh;
+    z-index:999;
+    opacity:0.6;
+    position:fixed;
+    top:0;
+    left:0;
+}
+.side_bar_contents{
+	width:80px;
+	margin-top:20px;
+	margin-left:20px;
+}
+
+.side_bar_contents_icon{
+	width:80px;
+	height:80px;
+}
+.side_bar_contents_text{
+	color:gray;
+	text-align:center;
+}
+.right_bar{
+	width:100px;
+	height:100vh;
+	z-index:999;
+	opacity:0.6;
+	display: none;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.right_bar_contents{
+	width:80px;
+	margin-top:20px;
+	margin-right:20px;
+}
+
+.right_bar_contents_icon{
+	width:80px;
+	height:80px;
+}
+.right_bar_contents_text{
+	color:gray;
+	text-align:center;
+}
+.save_local{
+	position:absolute;
+	bottom:0;
+}
+
+.main-display{
+	background-color:green;
+	width:100vw;
+	height:100vh;
+	z-index:0;
+	position:fixed;
+	top:0;
+	left:0;
+	opacity:0.1;
+	display:none;
+
+}
+#tab-control{
+	width:237px;
+	height:20px;
+	position:fixed;
+	top:20px;
+	left:120px;
+	background-color:blue;
+	display:none;
+}
+#tab-control a {
+   display: inline-block;            
+   border-width: 1px 1px 0px 1px;    
+   border-style: solid;              
+   border-color: black;              
+   float:left;
+   text-decoration: none;            
+   color: black;                      
+   background-color: white;          
+   font-weight: bold;                
+   position: relative;               
+}
+
+#tab-control a:hover {
+   text-decoration: underline;       
+}
+#tab-body{
+	display:none;
+	position:fixed;
+	top:40px;
+	left:120px;
+	z-index:2;
+}
+.main-sheet{
+	height:570px;
+	width:1050px;
+}
+
+/* 背景色は後で入れ替える*/
+#main-sheet1{
+   background-color: #CCFFFF;
+}
+#main-sheet2{
+     background-color:#DDFFFF;
+
+}
+#main-sheet3{
+   background-color: #FFCCFF;
+}
+#rotate-div {
+            display:none; 	
+            position:fixed;
+
+            z-index:997;
+        }
+
+#site-map{
+	width:1000px;
+	height:450px;
+	background-color:white;
+	position:fixed;
+	top:80px;
+	left:180px;
+    display:none;
+    z-index:1;
+    border:5px solid blue;
+}
+.site-map-contents{
+    display:inline-block;
+    background-color:white;
+    width:130px;
+    height:190px;
+    float:left;
+    margin:10px 10px;
+    border:1px solid black;
+    box-shadow:0px 0px 10px;
+
+}
