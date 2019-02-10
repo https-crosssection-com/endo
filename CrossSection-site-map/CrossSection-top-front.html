@@ -11,6 +11,7 @@
 
 </head>
 <body>
+	<!--サイドバー画面 -->
 <div id="side_bar" class="side_bar">
 	<div class="side_bar_contents">
 		<input id="lbl_btn_home" class="side_bar_contents_icon" type="image" src="icon_109910_256.png">
@@ -33,6 +34,13 @@
 		<p class="side_bar_contents_text">DOCS</p>
 	</div>
 </div>
+<!--背景画面 -->
+<div id="main-display" class="main-display">
+    
+</div>
+<!--メインコンテンツ(ライトバー+シート+回転するカード) -->
+<div id="main-contents">
+	<!--ライトバー -->
 <div id="right_bar" class="right_bar">
 	<div class="right_bar_contents">
 		<input id="add_card" class="right_bar_contents_icon" type="image" src="icon_111960_256.png">
@@ -50,9 +58,7 @@
 		<p class="right_bar_contents_text">save</p>
 	</div>
 </div>
-<div id="main-display" class="main-display">
-    
-</div>
+<!--シートタブのソース-->
  <div id="tab-control">
      	<a href="#main-sheet1">SHEET01</a>
      	<a href="#main-sheet2">SHEET02</a>
@@ -65,12 +71,15 @@
 	 </div>
 
 <div id="rotate-div" class="chand"></div>
+</div>
+
+<!--サイトマップ表示画面 -->
 <div id="site-map">
 	<div class="site-map-contents"></div>
 	<div class="site-map-contents"></div>
 	<div class="site-map-contents"></div>
 </div>
-
+<!--回転するカードのscript -->
 <script type="text/javascript">
         window.onload = function () {
 
@@ -84,6 +93,7 @@
            
         }
     </script>
+    <!--シートタブの入れ替え操作のscript -->
 <script type="text/javascript" src="sheet-tab.js"></script>
 
 </body>

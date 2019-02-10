@@ -6,10 +6,8 @@
     $('#lbl_btn_new').click(function () {
 
         $('#site-map').hide();
-        $('.right_bar').show();
+        $('#main-contents').show();
         $('.main-display').show();
-        $('#tab-control').show();
-        $('#tab-body').show();
 
     });
 
