@@ -562,9 +562,7 @@ var CMRotate = CMRotate || ( function () {
 
         $('.cm-rotate').attr('draggable', 'true');
 
-        $('.cm-rotate').attr('ondragover', 'f_dragover(event)');
-
-        $('.cm-rotate').attr('ondrop', 'f_drop(event)');
+        $('.cm-rotate').attr('ondragstart', 'f_dragstart(event)');
 
 
         div.style.width = _itemW + 'px';

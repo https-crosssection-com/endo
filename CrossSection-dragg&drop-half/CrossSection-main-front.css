@@ -106,17 +106,17 @@
 
 /* 背景色は後で入れ替える*/
 #main-sheet1{
-   background-color: #CCFFFF;
+   background-color: white;
    -khtml-user-drag: element;
 
 }
 #main-sheet2{
-     background-color:#DDFFFF;
+     background-color:white;
      -khtml-user-drag: element;
 
 }
 #main-sheet3{
-   background-color: #FFCCFF;
+   background-color: white;
    -khtml-user-drag: element;
 
 }
