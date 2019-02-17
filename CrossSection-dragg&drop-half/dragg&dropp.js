@@ -1,9 +1,23 @@
+
+
+
+  var x;
+  var y;
+
   /***** ドラッグ開始時の処理 *****/
 function f_dragstart(event){
 
+       event.target.classList.add("drag");
+
+        x = event.pageX - event.target.offsetLeft;
+        y = event.pageY - event.target.offsetTop;
+
+        
 
   //ドラッグするデータのid名をDataTransferオブジェクトにセット
   event.dataTransfer.setData("text", event.target.id);
+
+
 }
 
 /***** ドラッグ要素がドロップ要素に重なっている間の処理 *****/
@@ -20,32 +34,25 @@ function f_drop(event){
   var drag_elm =document.getElementById(id_name);
 
    //ドロップ先にドラッグされた要素を追加
-    $(event.currentTarget).append(drag_elm);
+   event.currentTarget.appendChild(drag_elm);
 
-  var dropafter = $('#tab-body').find(drag_elm);
+    drag_elm.style.top = event.pageY - y + "px";
+    drag_elm.style.left = event.pageX - x + "px";
 
-    console.log(dropafter);
 
-  $(dropafter).css('transform','none');
+    var dropafter = $('#tab-body').find('.cm-rotate');
 
-  var dropt = $(dropafter).offset().top;
-  
-  var dropl = $(dropafter).offset().left;
-  
-  $(dropafter).css('top', dropt);
-  
-  $(dropafter).css('left', dropl);
 
-  $(dropafter).css('z-index', '11');
+   $(dropafter).css('transform','none');
 
-  $(dropafter).css('position', 'relative');
+        $(dropafter).css('z-index','11');
 
+    
    //エラー回避のため、ドロップ処理の最後にdropイベントをキャンセルしておく
 
   event.preventDefault();
 
 }
-
 
 
 

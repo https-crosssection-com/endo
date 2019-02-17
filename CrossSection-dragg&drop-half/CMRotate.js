@@ -480,6 +480,7 @@ var CMRotate = CMRotate || ( function () {
 
         onUp();
 
+         
     }
 
 
