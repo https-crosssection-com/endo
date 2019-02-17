@@ -1,5 +1,5 @@
 var tabs = document.getElementById('tab-control').getElementsByTagName('a');
-var pages = document.getElementById('tab-body').getElementsByTagName('div');
+var pages = document.getElementById('tab-body').getElementsByClassName('main-sheet');
 
 // ---------------------------
 // ▼B：タブの切り替え処理
@@ -15,6 +15,7 @@ function changeTab() {
       }
       else {
          pages[i].style.display = "block";
+
       }
    }
 

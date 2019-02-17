@@ -126,7 +126,7 @@
             z-index:997;
         }
 .drag{
-	-webkit-transform:none;
+	display:inherit;
 }
 
 #site-map{
