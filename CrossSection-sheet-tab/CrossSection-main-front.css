@@ -21,32 +21,47 @@
 	color:gray;
 	text-align:center;
 }
+
+#main-contents{
+	display:none;
+	-khtml-user-drag: element;
+}
 .right_bar{
-	width:100px;
-	height:100vh;
+	width:7%;
+	height:100%;
 	z-index:999;
 	opacity:0.6;
-	display: none;
 	position:absolute;
 	top:0;
 	right:0;
+    padding-right:10px;
+    min-width:1px;
+    min-height:1px;
 }
 .right_bar_contents{
-	width:80px;
+	width:100%;
+	height:15%;
 	margin-top:20px;
 	margin-right:20px;
+	min-width:1px;
+    min-height:1px;
 }
 
 .right_bar_contents_icon{
-	width:80px;
-	height:80px;
+	width:100%;
+	height:100%;
+	min-width:1px;
+    min-height:1px;
 }
 .right_bar_contents_text{
+	width:100%;
+	height:20%;
+	min-width:1px;
+    min-height:1px;
 	color:gray;
 	text-align:center;
 }
 .save_local{
-	position:absolute;
 	bottom:0;
 }
 
@@ -69,7 +84,6 @@
 	top:20px;
 	left:120px;
 	background-color:blue;
-	display:none;
 }
 #tab-control a {
    display: inline-block;            
@@ -87,34 +101,96 @@
 #tab-control a:hover {
    text-decoration: underline;       
 }
+.tab{
+	position:absolute;
+	display:inline-block;
+	background-color:white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 10px;
+	border-top:solid 1px #CCFFCC;
+	border-left:solid 1px #CCFFCC;
+	border:right:solid 1px #CCFFCC;
+}
+#tab1{
+}
+#tab2{
+	left:75px;
+}
+#tab3{
+	left:145px;
+}
 #tab-body{
-	display:none;
 	position:fixed;
 	top:40px;
 	left:120px;
-	z-index:1;
+	display:none;
+	z-index:2;
+	 -khtml-user-drag: element;
 }
 .main-sheet{
-	height:570px;
-	width:1050px;
+	min-width:300px;
+	min-height:150px;
+	height:550px;
+	width:1150px;
+	top:23px;
+	bottom:10px;
+	position:absolute;
+	box-shadow: 4px 4px 4px gray;
+	 -khtml-user-drag: element;
+
 }
 
 /* 背景色は後で入れ替える*/
 #main-sheet1{
-   background-color: #CCFFFF;
+   background-color: white;
+   -khtml-user-drag: element;
+   z-index:3;
+
 }
 #main-sheet2{
-     background-color:#DDFFFF;
-
+     background-color:white;
+     -khtml-user-drag: element;
+   z-index:2;
 }
 #main-sheet3{
-   background-color: #FFCCFF;
+   background-color: white;
+   -khtml-user-drag: element;
+   z-index:1;
 }
 #rotate-div {
-            display: none;
-            width:100px;
-            height:80px; 	
+            display:none; 	
             position:fixed;
-
             z-index:997;
         }
+.drag{
+	display:inherit;
+	/*heightとwidthはカードのデフォルト設定に合わせる*/
+	height:120px;
+	width:80px;
+	min-height:30px;
+	min-width:20px;
+	position:absolute;
+}
+
+#site-map{
+	width:1000px;
+	height:450px;
+	background-color:white;
+	position:fixed;
+	top:80px;
+	left:180px;
+    display:none;
+    z-index:1;
+    border:5px solid blue;
+}
+.site-map-contents{
+    display:inline-block;
+    background-color:white;
+    width:130px;
+    height:190px;
+    float:left;
+    margin:10px 10px;
+    border:1px solid black;
+    box-shadow:0px 0px 10px;
+
+}

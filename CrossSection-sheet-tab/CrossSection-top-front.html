@@ -4,12 +4,20 @@
 	<title>CrossSection-mein-top</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="CrossSection-main-front.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+	<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 	<script src="CrossSection-main-front.js"></script>
+	 <!--ドラッグ＆ドロップ操作のscript -->
+     <script type="text/javascript" src="dragg&dropp.js"></script>
 	 <script type="text/javascript" src="CMRotate.js"></script>
-
+	 <script type="text/javascript" src="site-map.js"></script>
+	 <!--[if lte IE 8]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
 </head>
 <body>
+	<!--サイドバー画面 -->
 <div id="side_bar" class="side_bar">
 	<div class="side_bar_contents">
 		<input id="lbl_btn_home" class="side_bar_contents_icon" type="image" src="icon_109910_256.png">
@@ -32,7 +40,18 @@
 		<p class="side_bar_contents_text">DOCS</p>
 	</div>
 </div>
-<div id="right_bar" class="right_bar">
+<!--背景画面 -->
+<div id="main-display" class="main-display">
+    
+</div>
+<!--メインコンテンツ(ライトバー+シート+回転するカード) -->
+	<!--ライトバー -->
+<!--シートタブのソース-->
+     <div id="tab-body">
+     	 		<a href="#main-sheet1" id="tab1"class="tab">SHEET01</a>
+     	 <div id="main-sheet1" class="main-sheet" ondragover="f_dragover(event)" ondrop="f_drop(event)" style="position:absolute;
+     	 height:530px; width:1150px;" >
+     	 	<div id="right_bar" class="right_bar">
 	<div class="right_bar_contents">
 		<input id="add_card" class="right_bar_contents_icon" type="image" src="icon_111960_256.png">
 		<!--後で画像を入れ替える　-->
@@ -49,21 +68,70 @@
 		<p class="right_bar_contents_text">save</p>
 	</div>
 </div>
-<div id="main-display" class="main-display">
-    
+     	</div>
+     		<a href="#main-sheet2"id="tab2"class="tab">SHEET02</a>
+     <div id="main-sheet2" class="main-sheet" ondragover="f_dragover(event)" ondrop="f_drop(event)" style="position:absolute;
+     height:530px; width:1150px;">
+     	<div id="right_bar" class="right_bar">
+	<div class="right_bar_contents">
+		<input id="add_card" class="right_bar_contents_icon" type="image" src="icon_111960_256.png">
+		<!--後で画像を入れ替える　-->
+		<p class="right_bar_contents_text">add card</p>
+	</div>
+	<div class="right_bar_contents">
+		<input id="link" class="right_bar_contents_icon" type="image" src="icon_112370_256.png">
+		<!--後で画像を入れ替える　-->
+		<p class="right_bar_contents_text">link</p>
+	</div>
+	<div class="right_bar_contents save_local">
+		<input id="save_local" class="right_bar_contents_icon" type="image" src="icon_110320_256.png">
+		<!--後で画像を入れ替える　-->
+		<p class="right_bar_contents_text">save</p>
+	</div>
 </div>
- <div id="tab-control">
-     	<a href="#main-sheet1">SHEET01</a>
-     	<a href="#main-sheet2">SHEET02</a>
-     	<a href="#main-sheet3">SHEET03</a>
      </div>
-     <div id="tab-body">
-     <div id="main-sheet1" class="main-sheet"></div>
-     <div id="main-sheet2" class="main-sheet"></div>
-     <div id="main-sheet3" class="main-sheet"></div>
-	 </div>
+     		<a href="#main-sheet3"id="tab3"class="tab">SHEET03</a>
+     <div id="main-sheet3" class="main-sheet" ondragover="f_dragover(event)" ondrop="f_drop(event)" style="position:absolute;
+     height:530px; width:1150px;">
+     	<div id="right_bar" class="right_bar">
+	<div class="right_bar_contents">
+		<input id="add_card" class="right_bar_contents_icon" type="image" src="icon_111960_256.png">
+		<!--後で画像を入れ替える　-->
+		<p class="right_bar_contents_text">add card</p>
+	</div>
+	<div class="right_bar_contents">
+		<input id="link" class="right_bar_contents_icon" type="image" src="icon_112370_256.png">
+		<!--後で画像を入れ替える　-->
+		<p class="right_bar_contents_text">link</p>
+	</div>
+	<div class="right_bar_contents save_local">
+		<input id="save_local" class="right_bar_contents_icon" type="image" src="icon_110320_256.png">
+		<!--後で画像を入れ替える　-->
+		<p class="right_bar_contents_text">save</p>
+	</div>
+</div>
+     </div>
 <div id="rotate-div" class="chand"></div>
+</div>
 
+<!--サイトマップ表示画面 -->
+<div id="site-map">
+	<div class="site-map-contents"></div>
+	<div class="site-map-contents"></div>
+	<div class="site-map-contents"></div>
+</div> 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script src="CrossSection-main-front.js"></script>
+
+	<!--ドラッグ＆ドロップ操作のscript -->
+     <script type="text/javascript" src="dragg&dropp.js"></script>
+	 <script type="text/javascript" src="CMRotate.js"></script>
+	 <script type="text/javascript" src="site-map.js"></script>
+	 <!--[if lte IE 8]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<!--回転するカードのscript -->
 <script type="text/javascript">
         window.onload = function () {
 
@@ -73,10 +141,13 @@
                                     "images/img16.jpg", "images/img17.jpg", "images/img18.jpg"];
 
             CMRotate.init('rotate-div', 80, 120, 100, 6, 200, backgroundImages);
-
+            
            
         }
     </script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <!--シートタブの入れ替え操作のscript -->
 <script type="text/javascript" src="sheet-tab.js"></script>
 </body>
 

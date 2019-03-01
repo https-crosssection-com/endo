@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryUIリサイズサンプル</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+#d1{
+  border:1px solid #808080;
+  background-color:skyblue;
+  width:200px;
+  height:100px;
+  min-width:100px;
+  min-height:50px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script>
+$(function(){
+  //リサイズ設定
+  $("#d1").resizable();
+});
+</script>
+</head>
+<body>
+  <div id="d1">リサイズできます。</div>
+</body>
+</html>

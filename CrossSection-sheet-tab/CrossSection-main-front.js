@@ -1,19 +1,14 @@
 
 
 
-
-			
-
-
-
 	$(function () {
 
     $('#lbl_btn_new').click(function () {
 
-        $('.right_bar').show();
-        $('.main-display').show();
-        $('#tab-control').show();
+        $('#site-map').hide();
         $('#tab-body').show();
+        $('.main-display').show();
+        $('.main-sheet').resizable();
 
     });
 
