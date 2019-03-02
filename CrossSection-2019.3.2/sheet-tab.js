@@ -141,7 +141,8 @@ var tabs3 = document.getElementById('tab-body').getElementsByTagName('a')[2]
 
 var tabs = document.getElementById('tab-body').getElementsByTagName('a');
 var pages = document.getElementById('tab-body').getElementsByClassName('main-sheet');
-
+console.log(tabs);
+console.log(pages);
 // ---------------------------
 // ▼B：タブの切り替え処理
 // ---------------------------
@@ -176,6 +177,36 @@ for(var i=0; i<tabs.length; i++) {
    tabs[i].addEventListener('mousedown', changeTab, false);
 }
 
-// ---------------------------
-// ▼D：最初は先頭のタブを選択しておく
-// ---------------------------
+//DOCSを押した際の挙動
+
+var sheet_btn_1 = document.getElementById("lbl_btn_sheet1");
+var sheet_btn_2 = document.getElementById("lbl_btn_sheet2");
+var sheet_brn_3 = document.getElementById("lbl_btn_sheet3");
+
+var sheet_btn = [sheet_btn_1, sheet_btn_2, sheet_brn_3];
+console.log(sheet_btn);
+
+for(var i=0; i<sheet_btn.length; i++){
+  sheet_btn[i].addEventListener('click', SheetChange, false);
+}
+
+ function SheetChange(){
+ console.log(this);
+ var sheet_btn_number = this.id;
+ sheet_btn_number = sheet_btn_number.replace(/[^0-9]/g, "");
+ sheet_btn_number = sheet_btn_number-1;
+ console.log(sheet_btn_number);
+
+ for(var i=0; i<tabs.length; i++) {
+      tabs[i].style.zIndex = "2";
+      pages[i].style.zIndex = "2";
+   }
+   
+   tabs[sheet_btn_number].style.zIndex = "10";
+   pages[sheet_btn_number].style.zIndex = "10";
+
+   console.log(tabs[sheet_btn_number]);
+   console.log(pages[sheet_btn_number]);
+
+   return false;
+ }

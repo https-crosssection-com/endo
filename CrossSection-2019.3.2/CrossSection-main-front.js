@@ -25,6 +25,19 @@
 
 });
 
+    $(function () {
+
+
+    $('#lbl_btn_docs').click(function () {
+
+        $('#docs-sheet').show();
+
+        
+    });
+
+});
+
+
 
 
     

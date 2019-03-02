@@ -2,7 +2,8 @@ $(function () {
 
     $('#lbl_btn_home').click(function () {
 
-        $('#main-contents').hide();
+       $('#tab-body').hide();
+        $('.main-display').hide();
         $('#site-map').show();
 
     });
